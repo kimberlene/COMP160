@@ -1,0 +1,61 @@
+/** lab 9
+  * program to check if child or student and display the booking
+ */
+public class Customer
+{
+  private String name;
+  private boolean child;
+  private boolean student;
+  private boolean booked;
+  private int ageIn;
+  /**Constructor to initialize variables   
+    *@param nameIn To take the name of customer
+    *@param age To take the age of person
+    *@param studentIn to check if student or not
+    */ 
+  public Customer(String nameIn,int age,boolean studentIn)
+  {
+    name=nameIn;
+    studentIn=student;
+    ageIn=age;
+  }
+  
+  /** returns nameof the person
+    */ 
+  public String getName()
+  {
+    return name;
+  }
+  /** Returns if customer is child or not
+    */ 
+  public  Boolean isChild()
+  {
+    if(ageIn>=5 && ageIn<=16)
+    {
+      return true;
+    }
+    else return false;
+  }
+  /** Returns if customer is student or not
+    */ 
+  public Boolean isStudent()
+  {
+    if(student==true)
+    {
+      return true;
+    }
+    else return false;
+  }
+  /** Returns if ticket is confirmed
+    */ 
+  public boolean isBooked()
+  {
+    return booked;
+  }
+  /*To set the value of booked as true
+   */ 
+  public void setBooked()
+  {
+    booked=true;
+}
+}

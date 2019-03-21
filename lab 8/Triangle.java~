@@ -1,0 +1,20 @@
+public class Triangle{
+  String name;
+  int p1x, p1y,p2x, p2y, p3x, p3y;
+  
+  public triangle( int pt1x, pt1y, pt2x, pt2y, pt3x, pt3y){
+    p1x = pt1x;
+    p1y = pt1y;
+    p2x = pt2x;
+    p2y = pt2y;
+    p3x = pt3x;
+    p3y = pt3y;
+  }
+  
+  public double CalcSide (int x1, int y1, int x2, int y2){
+    return = Math.sqrt((Math.pow(x2-x1,2) + Math.pow(y2-y1,2)));
+  }
+  
+  public double getPerimter(){
+    
+    

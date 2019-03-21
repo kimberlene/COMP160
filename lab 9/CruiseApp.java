@@ -1,0 +1,96 @@
+/** application class for Customer.java
+ * Lab 9 COMP160
+ */
+import java.util.Scanner;
+public class CruiseApp{
+  private static float ticketprice=56.0f;
+  private static float mealprice=30.0f;
+  public static String input="";
+    
+    public static void main(String[]args){
+        //each Customer created with name, age, showed student ID card
+        Customer customer1 = new Customer("Aaron Stott",17, true);
+        Customer customer2 = new Customer("Betty Adams",17, false);
+        Customer customer3 = new Customer("Corin Child",16, true);
+        Customer customer4 = new Customer("Doris Stewart",25, true);
+        Customer customer5 = new Customer("Edmond Cheyne",12, false);
+        Customer customer6 = new Customer("Fiona Chaney",7, false);
+        Customer customer7 = new Customer("Ged Still-Child",16, true);
+        Customer customer8 = new Customer("Harry Adamson",20, false);
+        confirmBooking(customer1); //confirming booking of each customer
+        confirmBooking(customer2);
+        confirmBooking(customer3);
+        confirmBooking(customer4);
+        confirmBooking(customer5);
+        confirmBooking(customer6);
+        confirmBooking(customer7);
+        confirmBooking(customer8);
+          showBooked(customer1);
+          showBooked(customer2);
+          showBooked(customer3);
+          showBooked(customer4);
+          showBooked(customer5);
+          showBooked(customer6);
+          showBooked(customer7);
+          showBooked(customer8);
+        
+    }
+    /** to confirm booking and to display the booking details
+      */ 
+    public static void confirmBooking(Customer customer){
+      Scanner scan=new Scanner(System.in);
+      
+      if(customer.isChild()) //checking for a child and student
+      {
+        System.out.println(customer.getName());
+        System.out.println("Ticket Price:  $"+ticketprice/2);
+        System.out.println("Meal Price:    $"+ mealprice/2);      
+      }
+      
+      else if( customer.isStudent()) //checking for student
+      {
+        System.out.println(customer.getName());
+        System.out.println(" Ticket Price:  $"+ticketprice/2);
+        System.out.println(" Meal Price:    $"+ (ticketprice-((20/100)*ticketprice)));
+      }
+      
+      else 
+      {
+        
+       System.out.println(customer.getName()); //case of "others"
+       System.out.println(" Ticket Price:  $"+(ticketprice-((20/100)*ticketprice)));
+       System.out.println(" Meal Price:    $"+ (ticketprice-((10/100)*ticketprice)));
+        
+      }
+      
+        
+        
+     
+        
+        System.out.println("Confirm Booking for "+customer.getName()+"(Y/N)"); //Asking for user for confirmation of booking
+        input=scan.nextLine();
+        
+        if(input.equals("Y") || input.equals("y"))
+          
+        {
+          System.out.println("Booked");
+          customer.setBooked();
+        
+        
+      }
+    
+    
+    
+}
+    /** To display the names of the customers who have confirmed their bookings
+      * @param customer instance of Customer type which carries details of each customer
+      */
+        
+    public static void showBooked(Customer customer) 
+    {
+      if(customer.isBooked())
+      {
+      System.out.println(customer.getName()+" is Booked");
+      }
+    }
+}

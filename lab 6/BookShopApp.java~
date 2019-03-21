@@ -1,0 +1,17 @@
+import java.text.NumberFormat;
+public class BookShopApp{
+  
+  Book b1= new Book ();
+  set.Title("Life of Pi");
+  set.Pages(348);
+  set.Price(28.90);
+  
+  Book b2= new Book ();
+  set.Title("Mister Pip");
+  set.Pages(240);
+  set.Price(22.70);
+  
+  Book b3= new Book ();
+  set.Title("Cinderella");
+  set.Pages(200);
+  set.Price(20.50);

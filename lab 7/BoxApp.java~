@@ -1,0 +1,7 @@
+public class BoxApp{
+  
+  public static void main(String args[]){
+    Box box1 = newBox();
+    box1.toString();
+  }
+}

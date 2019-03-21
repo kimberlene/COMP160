@@ -1,0 +1,7 @@
+public class MyFrameApp{
+  public void paint(Graphics g){
+    MyFrame m1= new MyFrame ();
+    m1.setSize (300,150);
+    m1.setVisible(true);
+  }
+}

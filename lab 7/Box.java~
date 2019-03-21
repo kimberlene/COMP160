@@ -1,0 +1,28 @@
+public class Box{
+  
+  public Box(int h, int w, int l){
+    h = height;
+    w = width;
+    l = length;
+  }
+  
+  public void setHeight( int height){
+    height = h;
+  }
+  public void setWidth( int width){
+    width = w;
+  }
+  public void setLength( int length){
+    length = l;
+  }
+    
+  public static void main(String args[])
+  {
+    int height = 0;
+    int width = 0;
+    int length = 0;
+  }
+}  
+   
+  
+  
