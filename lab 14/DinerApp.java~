@@ -1,0 +1,13 @@
+import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
+
+public class DinerApp{
+  public static void main(String args[]){
+    JFrame JFrame1 = new JFrame("DinerApp");
+    JFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    JFrame1.getContentPane().add(new TablePanel());
+    JFrame1.pack();
+    JFrame1.setVisible(true);  
+  }
+}

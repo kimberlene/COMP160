@@ -1,0 +1,31 @@
+import java.swing.*;
+import javax.awt.*;
+import java.lang.String;
+import java.awt.Color;
+
+public class TablePanel extends JPanel{
+  private Diner diner1, diner2, diner3, diner4, diner5, diner6;
+  
+  public TablePanel(){
+  Diner diner1 = new Diner(100,100,"kim",1, Color.blue);
+  Diner diner2 = new Diner(150,120,"kim",2,Color.blue);
+  Diner diner3 = new Diner(200,130,"kim",3,Color.blue);
+  Diner diner4 = new Diner(250,140,"kim",4,Color.blue);
+  Diner diner5 = new Diner(300,150,"kim",5,Color.blue);
+  Diner diner6 = new Diner(-100,160,"kim",6,Color.blue);
+  setSize(300,300);
+  setBackground(Color.white);
+  }
+  
+    public void paintComponent( Graphics g){
+    super.paintComponent(g);
+    diner1.draw(g);
+    diner2.draw(g);
+    diner3.draw(g);
+    diner4.draw(g);
+    diner5.draw(g);
+    diner6.draw(g);
+    g.drawRect(100,300,200,600);
+  }
+  
+}

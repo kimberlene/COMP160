@@ -1,0 +1,27 @@
+public class Diner{
+  private int x;
+  private int y;
+  private String name;
+  private Color colour;
+  private int seatNum; 
+  private final int diameter = 50;
+  
+  public Diner(int x1, int y1, String name1, int seatNum1, Color colour1){
+  x = x1;
+  y = y1;
+  name = name1;
+  seatNum = seatNum1; 
+  colour = colour1;
+  }
+  
+  public void draw( Graphics g){
+    g.setColor(colour);
+    g.fillOval(x, y, diameter, diameter);
+    g.setColor(Color.black);
+    g.setFont(new Font("Courier", Font.PLAIN, 8));
+    g.drawString(name, x, y);
+    g.setFont(new Font("Courier", Font.BOLD, 6));
+    
+    
+  }
+              }
