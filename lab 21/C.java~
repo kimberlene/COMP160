@@ -1,0 +1,10 @@
+public class C extends B{
+  private int x;
+  private String a;
+  public (int x, String a, String s){
+    this.x=x;
+    this.a=a;
+    super(s);
+    s="Five";
+  }
+}

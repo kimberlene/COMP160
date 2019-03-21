@@ -1,0 +1,10 @@
+public class B
+{
+  private String s;
+  public class B(String s){
+    this.s =s;
+  }
+  public Strin getS(){
+    return s;
+  }
+}
